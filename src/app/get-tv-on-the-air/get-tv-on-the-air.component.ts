@@ -12,6 +12,7 @@ export class GetTvOnTheAirComponent implements OnInit {
   constructor(private dataApi: DataApiService) { }
 
   ngOnInit(): void {
+    this.getTvOnTheAir();
   }
 
   getTvOnTheAir() {
