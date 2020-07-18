@@ -1,1 +1,22 @@
-<p>get-tv-on-the-air works!</p>
+<app-nav></app-nav>
+
+<div class="container">
+
+  <h1 class="titulo">Series TV</h1>
+  <div class="bloque_series">
+    <div class="caratulas" *ngFor='let tvShow of tvShows'>
+      <span class="poster">
+        <img src="https://image.tmdb.org/t/p/w92{{tvShow.poster_path}}" alt="{{tvShow.name | uppercase}}" />
+      </span>
+
+      <p> Nombre: {{tvShow.name | uppercase}}</p>
+
+      <p>Fecha Estreno: {{tvShow.first_air_date}}</p>
+
+        <p>Votación: {{tvShow.vote_average}}
+      </p>
+    </div>
+    <script>
+    </script>
+  </div>
+</div>

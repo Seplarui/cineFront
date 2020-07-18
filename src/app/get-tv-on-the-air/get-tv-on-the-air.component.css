@@ -1,0 +1,36 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.titulo {
+  margin-left: 20px;
+}
+
+.bloque_series {
+  width: 1200px;
+  margin-top: 20px;
+}
+
+.caratulas {
+  float: left;
+  width: 205px;
+  height: 290px;
+  overflow: hidden;
+  margin: 20px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  text-align: center;
+}
+
+.poster {
+  transition: all 1.3s ease-in-out;
+}
+
+.poster:hover {
+  -webkit-box-shadow: 10px 10px 14px 2px;
+  box-shadow: 10px 10px 14px 2px;
+  transition: 1s;
+  animation: scale 1s infinite ease-in-out;
+}

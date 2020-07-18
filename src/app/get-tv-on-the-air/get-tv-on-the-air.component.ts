@@ -9,6 +9,7 @@ import { DataApiService } from '../services/data-api.service';
 })
 export class GetTvOnTheAirComponent implements OnInit {
 
+  tvShows: any[] = [];
   constructor(private dataApi: DataApiService) { }
 
   ngOnInit(): void {
@@ -16,6 +17,10 @@ export class GetTvOnTheAirComponent implements OnInit {
   }
 
   getTvOnTheAir() {
+
+    this.dataApi.getTvOnTheAir().subscribe((data) => { this.tvShows = data['results']; },
+      (error) => { console.error(error); });
+
     this.dataApi.getTvOnTheAir().subscribe((tvShows) => console.log(tvShows));
   }
 
