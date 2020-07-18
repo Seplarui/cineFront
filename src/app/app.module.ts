@@ -9,12 +9,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './components/home/home.component';
 import { GetTvOnTheAirComponent } from './get-tv-on-the-air/get-tv-on-the-air.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     GetTvOnTheAirComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
