@@ -15,7 +15,7 @@
 .caratulas {
   float: left;
   width: 205px;
-  height: 290px;
+  height: 325px;
   overflow: hidden;
   margin: 20px;
   margin-top: 15px;
@@ -26,6 +26,9 @@
 
 .poster {
   transition: all 1.3s ease-in-out;
+}
+.poster>img>a {
+  cursor: pointer;
 }
 
 .poster:hover {

@@ -1,22 +1,22 @@
 <app-nav></app-nav>
 
 <div class="container">
-
   <h1 class="titulo">Series TV</h1>
   <div class="bloque_series">
-    <div class="caratulas" *ngFor='let tvShow of tvShows'>
+    <div class="caratulas" *ngFor='let tvShow of tvShows["results"]'>
+
       <span class="poster">
-        <img src="https://image.tmdb.org/t/p/w92{{tvShow.poster_path}}" alt="{{tvShow.name | uppercase}}" />
+        <a href="#"><img src="https://image.tmdb.org/t/p/w92{{tvShow.poster_path}}"
+            alt="{{tvShow.name | uppercase}}" /></a>
       </span>
 
       <p> Nombre: {{tvShow.name | uppercase}}</p>
 
       <p>Fecha Estreno: {{tvShow.first_air_date}}</p>
 
-        <p>Votación: {{tvShow.vote_average}}
-      </p>
+      <p>Votación: {{tvShow.vote_average}}</p>
     </div>
-    <script>
-    </script>
   </div>
 </div>
+
+<h1>Número de páginas: {{tvShows['total_pages']}}</h1>
