@@ -37,3 +37,9 @@
   transition: 1s;
   animation: scale 1s infinite ease-in-out;
 }
+
+.paginacion {
+  float: left;
+  margin:20px;
+  clear: both;
+}
