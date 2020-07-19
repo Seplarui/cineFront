@@ -19,6 +19,6 @@
   </div>
   <div class="paginas">
     <!-- <h1 class="paginacion">Páginas: {{tvShows["total_pages"]}}</h1> -->
-    <h4 class="paginas" *ngFor='let pagina of [].constructor(tvShows["total_pages"]);let num=index;'>{{num+1}}</h4>
+    <p class="paginas numero_paginas" *ngFor='let pagina of [].constructor(tvShows["total_pages"]);let num=index;'>{{num+1}}</p>
   </div>
 </div>
