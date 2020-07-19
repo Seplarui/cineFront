@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../services/data-api.service';
-import { Router, ActivatedRoute, Params, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 
 
@@ -11,26 +11,33 @@ import { AppRoutingModule } from '../app-routing.module';
 })
 
 export class GetTvOnTheAirComponent implements OnInit {
-
+  page: string;
   tvShows: any[];
-  constructor(private dataApi: DataApiService, ) {
-
+  constructor(private dataApi: DataApiService, private rutaActiva: ActivatedRoute) {
+    console.log(this.rutaActiva.snapshot.paramMap.get('page'));
+    const page = this.rutaActiva.snapshot.paramMap.get('page');
   }
 
   ngOnInit(): void {
     this.getTvOnTheAir();
+    this.page = this.rutaActiva.snapshot.params.page;
   }
 
   getTvOnTheAir() {
 
-
-    this.dataApi.getTvOnTheAir().subscribe((response) => {
+    this.rutaActiva.params.subscribe(
+      (params: Params) => {
+        this.page = params.page;
+      }
+    );
+    console.log(this.page);
+    this.dataApi.getTvOnTheAir(this.page).subscribe((response) => {
       this.tvShows = response;
     },
       (error) => { console.error(error); }
     );
 
-    this.dataApi.getTvOnTheAir().subscribe((tvShows) => console.log(tvShows));
+    this.dataApi.getTvOnTheAir(this.page).subscribe((tvShows) => console.log(tvShows));
 
   }
 
