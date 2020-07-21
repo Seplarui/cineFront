@@ -1,0 +1,67 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.titulo {
+  margin-left: 20px;
+}
+
+.bloque_series {
+  width: 1200px;
+  margin-top: 20px;
+}
+
+.caratulas {
+  float: left;
+  width: 205px;
+  height: 325px;
+  overflow: hidden;
+  margin: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.poster {
+  transition: all 1.3s ease-in-out;
+}
+
+.poster>img>a {
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.poster:hover {
+  -webkit-box-shadow: 10px 10px 14px 2px;
+  box-shadow: 10px 10px 14px 2px;
+  transition: 1s;
+  animation: scale 1s infinite ease-in-out;
+}
+
+/* .paginacion {
+  float: left;
+  margin:20px;
+  clear: both;
+} */
+
+.paginas {
+  float: left;
+  margin: 10px;
+  /* clear: both; */
+  align-items: center;
+}
+
+.numero_paginas {
+  padding: 5px;
+  margin: 20px 20px 20px 20px;
+  position: relative;
+  background-color: lightblue;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.paginas>.paginas>a {
+  text-decoration: none;
+}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { GetTvOnTheAirComponent } from './get-tv-on-the-air/get-tv-on-the-air.component';
+import { GetTvOnTheAirComponent } from '../app/components/get-tv-on-the-air/get-tv-on-the-air.component';
 
 
 const routes: Routes = [

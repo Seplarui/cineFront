@@ -7,9 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HomeComponent } from './components/home/home.component';
-import { GetTvOnTheAirComponent } from './get-tv-on-the-air/get-tv-on-the-air.component';
+import { GetTvOnTheAirComponent } from './components/get-tv-on-the-air/get-tv-on-the-air.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
