@@ -25,11 +25,11 @@ export class GetTvOnTheAirComponent implements OnInit {
 
   getTvOnTheAir() {
 
-    this.rutaActiva.params.subscribe(
-      (params: Params) => {
-        this.page = params.page;
-      }
-    );
+    // this.rutaActiva.params.subscribe(
+    //   (params: Params) => {
+    //     this.page = params.page;
+    //   }
+    // );
     console.log(this.page);
     this.dataApi.getTvOnTheAir(this.page).subscribe((response) => {
       this.tvShows = response;

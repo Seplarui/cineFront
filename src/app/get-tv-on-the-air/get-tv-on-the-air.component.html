@@ -21,7 +21,7 @@
   <div class="paginas">
     <!-- <h1 class="paginacion">Páginas: {{tvShows["total_pages"]}}</h1> -->
   <p class="paginas numero_paginas" *ngFor='let pagina of [].constructor(tvShows["total_pages"]);let num=index;'>
-    <a [routerLink]="['/series',3]">kk</a>
+    <a [routerLink]="['/series',10]">kk</a>
     <button type="button" [routerLink]="['/series/',num+1]" routerLinkActive="active">Series</button>
   </p>
   </div>
