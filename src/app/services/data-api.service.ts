@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DataApiService {
 
   constructor(private http: HttpClient) { }
-  apiKey = 'd1c58472015c64a45032584cd1373753';
+  public apiKey = 'd1c58472015c64a45032584cd1373753';
 
   getTvOnTheAir(page: string) {
     const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
@@ -25,6 +25,12 @@ export class DataApiService {
   getTVShow() {
 
     const urlApi = ' https://api.themoviedb.org/3/tv/1403?api_key=d1c58472015c64a45032584cd1373753&language=es-ES';
+  }
+
+  getUpComingMovies() {
+
+    const urlApi = `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=es-ES&page=1`;
+    return this.http.get<any>(urlApi);
   }
 }
 

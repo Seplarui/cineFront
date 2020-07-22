@@ -2,19 +2,35 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <div class="caratulas" *ngFor='let movie of movies["results"]'>
+        <span class="poster">
+          <a href="#"><img src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}"
+              alt="{{movie.title | uppercase}}" /></a>
+        </span>
+        <p> {{movie.title}}</p>
+        <p>Votación: {{movie.vote_average}}</p>
+        <p>Estreno: {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
+      </div>
 
-      {{movies['results'][0].popularity}}
-      <br>
-
-      {{movies['dates'] | json}}
-
-      {{movies['dates']}}
-
-
-
-
-      <br>
-      <h1>{{movies["total_pages"]}}</h1>
     </div>
   </div>
+  <h1>{{movies["total_pages"]}}</h1>
+  <p class="paginas numero_paginas" *ngFor='let pagina of [].constructor(movies["total_pages"]);let num=index;'>
+    <a href="#">{{num+1}}</a>
+  </p>
 </div>
+
+<!--Acceso a los datos-->
+<!-- {{movies['results'][0].popularity}}
+<br>
+
+{{movies['dates'] | json}}
+<br>
+{{movies['dates'].maximum}}
+{{movies['dates'].minimum}}
+
+
+
+
+<br> -->
+

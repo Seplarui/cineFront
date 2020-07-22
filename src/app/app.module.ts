@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GetTvOnTheAirComponent } from './components/get-tv-on-the-air/get-tv-on-the-air.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './components/nav/nav.component';
+import { UpcomingMoviesComponent } from './components/upcoming-movies/upcoming-movies.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavComponent } from './components/nav/nav.component';
     HomeComponent,
     GetTvOnTheAirComponent,
     NavComponent,
+    UpcomingMoviesComponent,
   ],
   imports: [
     BrowserModule,
