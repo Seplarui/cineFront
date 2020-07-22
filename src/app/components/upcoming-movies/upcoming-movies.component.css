@@ -8,9 +8,18 @@
   box-shadow: 1px 1px 2px #ddd;
   text-align: center;
   margin-top: 25px;
+  border-radius: 20px;
 
 }
 
 .paginas {
   float:left;
+  padding: 5px;
+  margin:25px 25px 25px 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+span>a>img {
+  margin-top:25px;
 }

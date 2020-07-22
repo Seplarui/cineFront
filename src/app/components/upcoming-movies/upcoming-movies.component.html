@@ -1,5 +1,5 @@
 <app-nav></app-nav>
-<div class="container">
+<div class="container bg-light">
   <div class="row">
     <div class="col-md-12">
       <div class="caratulas" *ngFor='let movie of movies["results"]'>
@@ -13,11 +13,11 @@
       </div>
 
     </div>
+    <p class="paginas" *ngFor='let pagina of [].constructor(movies["total_pages"]);let num=index;'>
+      <a href="#">{{num+1}}</a>
+    </p>
   </div>
-  <h1>{{movies["total_pages"]}}</h1>
-  <p class="paginas numero_paginas" *ngFor='let pagina of [].constructor(movies["total_pages"]);let num=index;'>
-    <a href="#">{{num+1}}</a>
-  </p>
+
 </div>
 
 <!--Acceso a los datos-->
@@ -33,4 +33,3 @@
 
 
 <br> -->
-
