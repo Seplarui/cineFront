@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'series/:page', component: GetTvOnTheAirComponent },
   { path: 'series', component: GetTvOnTheAirComponent },
-  { path: 'estrenos', component: UpcomingMoviesComponent }
+  { path: 'estrenos/:pagina', component: UpcomingMoviesComponent }
 ];
 
 @NgModule({

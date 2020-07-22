@@ -13,8 +13,11 @@
       </div>
 
     </div>
-    <p class="paginas" *ngFor='let pagina of [].constructor(movies["total_pages"]);let num=index;'>
-      <a href="#">{{num+1}}</a>
+    <p class="paginas" *ngFor='let pagina of [].constructor(movies["total_pages"]);let page=index;'>
+      <!-- <a href="#">{{num+1}}</a> -->
+      <a [routerLink]="['/estrenos',page+1]">{{page+1}}</a>
+      <a (click)="goPagina()">{{page+1}}</a>
+
     </p>
   </div>
 
